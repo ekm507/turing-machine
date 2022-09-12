@@ -34,3 +34,5 @@ if there are other transitions from that state, they will be checked first.
 #### special states
 
 `q_accept` and `q_reject` are special states in which machine halts.
+
+`q0` is the initial state.
