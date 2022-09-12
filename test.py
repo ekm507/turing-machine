@@ -61,12 +61,11 @@ m1.tape.set_tape(tape_string)
 maximum_steps = 1000
 for i in range(maximum_steps):
     print('-'*len(tape_string))
-    print(f'step: {i}\nstate: {m1.state}')
-    print(' '*m1.index+'o')
-    print(m1.tape.get_tape_string())
+    print(' '*m1.index+'🠗')
+    print(m1.tape.get_tape_string(), f'step: {i} - state: {m1.state}')
+    print()
     m1.one_step()
     if m1.halt == True:
-        print()
         print()
         print(f'machine halted in {i} steps')
         print('final state is', m1.state)
