@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import re
-from pprint import pprint
 
 class Turing():
     def __init__(self) -> None:
