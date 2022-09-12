@@ -18,7 +18,7 @@ class Tape():
 
 class Turing():
     def __init__(self) -> None:
-        self.tape = None
+        self.tape = Tape()
         self.program = dict()
         self.state = 'q0'
         self.index = 0
