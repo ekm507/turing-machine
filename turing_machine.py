@@ -56,4 +56,13 @@ class Turing():
             self.halt = True
             return
         
-        
+        overwrite_string, next_direction, final_state = self.program[self.state][character]
+
+        self.tape.set_character(self.index, overwrite_string)
+        if next_direction.lower() in ['r', 'right']:
+            self.index += 1
+        elif next_direction.lower() in ['l', 'left']:
+            self.index -= 1
+        else:
+            print('error in program')
+            
