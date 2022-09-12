@@ -42,3 +42,18 @@ class Turing():
     def set_tape(self, tape:Tape):
         self.tape = tape
 
+    def one_step(self):
+    # simulate one step
+        character = self.tape.get_character(self.index)
+
+        # check if it is in halt state
+        if self.state in ['q_accept', 'q_reject']:
+            self.halt = True
+            return
+
+        if self.state not in self.program or character not in self.program[self.state] or self.halt == True:
+            self.state = 'q_reject'
+            self.halt = True
+            return
+        
+        
