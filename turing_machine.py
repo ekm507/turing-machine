@@ -64,7 +64,7 @@ class Turing():
         elif next_direction.lower() in ['l', 'left']:
             self.index -= 1
         else:
-            print('error in program')
+            print('error in program\n', self.program[self.state][character])
         
         self.state = final_state
             
