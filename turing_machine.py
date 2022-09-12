@@ -4,10 +4,10 @@ import re
 
 class Tape():
     def __init__(self) -> None:
-        self.tape = ''
+        self.tape = []
     
     def set_tape(self, tape:str):
-        self.tape = tape
+        self.tape = list(tape)
     
     def get_character(self, index:int):
         return self.tape[index]
