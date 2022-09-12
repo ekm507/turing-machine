@@ -65,4 +65,6 @@ class Turing():
             self.index -= 1
         else:
             print('error in program')
+        
+        self.state = final_state
             
