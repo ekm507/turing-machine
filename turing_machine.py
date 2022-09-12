@@ -1,9 +1,24 @@
 #!/usr/bin/python3
 import re
 
-class Turing():
+
+class Tape():
     def __init__(self) -> None:
         self.tape = ''
+    
+    def set_tape(self, tape:str):
+        self.tape = tape
+    
+    def get_character(self, index:int):
+        return self.tape[index]
+    
+    def set_character(self, index:int, character:str):
+        self.tape[index] = character
+
+
+class Turing():
+    def __init__(self) -> None:
+        self.tape = None
         self.program = dict()
 
     def set_program_by_string(self, program:str):
@@ -20,17 +35,7 @@ class Turing():
 
     def set_program_by_dict(self, program:dict):
         self.program = program
-
-
-class Tape():
-    def __init__(self) -> None:
-        self.tape = ''
     
-    def set_tape(self, tape:str):
+    def set_tape(self, tape:Tape):
         self.tape = tape
-    
-    def get_character(self, index:int):
-        return self.tape[index]
-    
-    def set_character(self, index:int, character:str):
-        self.tape[index] = character
+
