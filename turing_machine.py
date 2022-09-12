@@ -22,3 +22,16 @@ class Turing():
     def set_program_by_dict(self, program:dict):
         self.program = program
 
+
+class Tape():
+    def __init__(self) -> None:
+        self.tape = ''
+    
+    def set_tape(self, tape:str):
+        self.tape = tape
+    
+    def get_character(self, index:int):
+        return self.tape[index]
+    
+    def set_character(self, index:int, character:str):
+        self.tape[index] = character
