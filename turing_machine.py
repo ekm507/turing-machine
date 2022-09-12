@@ -20,6 +20,7 @@ class Turing():
     def __init__(self) -> None:
         self.tape = None
         self.program = dict()
+        self.state = 'q0'
 
     def set_program_by_string(self, program:str):
         transitions = program.split('\n')
