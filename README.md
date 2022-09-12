@@ -25,5 +25,12 @@ q0 0->x,R q1
 ```
 which shows a transistion between state q0 and q1.
 if state of the machine is q0,  
-whenever read character is '0', the machine will overwrite an 'x' on it and go to the right.  
+whenever read character is `0`, the machine will overwrite an `x` on it and go to the right.  
 then state of the machine will be changed to q1.
+
+input string can be set like a wildcard using `*` character. so that any read string will trigger that transition.  
+if there are other transitions from that state, they will be checked first.
+
+#### special states
+
+`q_accept` and `q_reject` are special states in which machine halts.
