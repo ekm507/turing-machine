@@ -9,6 +9,9 @@ class Tape():
     def set_tape(self, tape:str):
         self.tape = list(tape)
     
+    def get_tape_string(self, index_from:int=0, index_to:int=-1):
+        return ''.join(self.tape[index_from: index_to])
+    
     def get_character(self, index:int):
         return self.tape[index]
     
