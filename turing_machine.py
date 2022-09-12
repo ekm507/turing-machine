@@ -21,6 +21,7 @@ class Turing():
         self.tape = None
         self.program = dict()
         self.state = 'q0'
+        self.index = 0
 
     def set_program_by_string(self, program:str):
         transitions = program.split('\n')
