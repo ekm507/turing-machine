@@ -48,7 +48,7 @@ q50 1 -> 1, L q_reject
 
 """.replace('\n\n', '\n').strip('\n')
 
-tape_string = '0001#0001_'
+tape_string = '001101#001101_'
 
 m1 = Turing()
 m1.set_program_by_string(program)
@@ -59,15 +59,16 @@ m1.tape.set_tape(tape_string)
 # pprint(m1.program)
 
 maximum_steps = 1000
-for _ in range(maximum_steps):
+for i in range(maximum_steps):
     print('-'*len(tape_string))
-    print(m1.state)
+    print(f'step: {i}\nstate: {m1.state}')
     print(' '*m1.index+'o')
     print(m1.tape.get_tape_string())
     m1.one_step()
     if m1.halt == True:
         print()
         print()
+        print(f'machine halted in {i} steps')
         print('final state is', m1.state)
         break
 else:
